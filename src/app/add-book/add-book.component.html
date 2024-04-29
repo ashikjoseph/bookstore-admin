@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="d-flex justify-content-center align-items-center">
+
+    <div class="d-flex justify-content-center align-items-center flex-column w-100 mt-5">
+        <div>
+            <button class="btn btn-primary" (click)="backToHome()">Back</button>
+        </div>
+        <h3 style="color: #0040ff;">Add New Book Details</h3>
+        <form class="border rounded p-5 shadow mt-3 w-50">
+            <div class="mt-3">
+                <input [(ngModel)]="book.id" name="bid" type="text" placeholder="Book Id" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input [(ngModel)]="book.bookName" name="bName" type="text" placeholder="Book Name"
+                    class="form-control">
+            </div>
+            <div class="mt-3">
+                <input [(ngModel)]="book.author" name="bAuthor" type="text" placeholder="Author" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input [(ngModel)]="book.price" name="bPrice" type="text" placeholder="Price" class="form-control">
+            </div>
+            <div class="mt-3">
+                <input [(ngModel)]="book.coverImage" name="bcoverImage" type="text" placeholder="coverImage"
+                    class="form-control">
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-outline-warning" (click)="clearFields()">CANCEL</button>
+                <button class="btn btn-outline-success ms-5" (click)="addBook()">ADD</button>
+            </div>
+        </form>
+    </div>
+</div>
